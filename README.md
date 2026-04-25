@@ -488,7 +488,7 @@ traceroute 10.10.40.30
 
 | | Details |
 |---|---|
-| **Name** | Shehroz |
+| **Name** | Shehroz Majeed |
 | **Course** | CE313 — Computer Communications & Networks |
 | **Institution** | GIK Institute of Engineering Sciences & Technology |
 | **Instructor** | Engr. Muhammad Ahmad Nawaz |
