@@ -441,16 +441,9 @@ ZT-DTwin/
 ├── 📂 simulation/
 │   ├── ZT_DTwin_Enterprise.pkt           ← Cisco Packet Tracer simulation file
 │   └── configs/                          ← Per-device CLI configurations
-│       ├── CORE-R1.txt                   ← Core Router 1 (OSPF, NAT, BGP)
-│       ├── CORE-R2.txt                   ← Core Router 2 (redundancy)
-│       ├── DIST-SW1.txt                  ← Distribution Switch 1 (L3, VLAN routing)
-│       ├── DIST-SW2.txt                  ← Distribution Switch 2
-│       ├── ACC-SW-IT.txt                 ← Access Switch — IT VLAN
-│       ├── ACC-SW-HR.txt                 ← Access Switch — HR VLAN
-│       ├── ACC-SW-FIN.txt                ← Access Switch — Finance VLAN
-│       ├── ACC-SW-SALES.txt              ← Access Switch — Sales VLAN
-│       └── ACC-SW-SRV.txt                ← Server Farm Access Switch
-│
+│       ├── ip address.pdf                   
+│       
+│                         
 ├── 📂 attacks/
 │   ├── syn_flood.py                      ← Scapy SYN flood DoS script
 │   ├── dns_poison.py                     ← DNS cache poisoning script
