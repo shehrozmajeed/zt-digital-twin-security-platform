@@ -1,5 +1,3 @@
-Here is the README file enhanced to a highly professional, academic-enterprise standard, suitable for a senior-level capstone project, graduate research, or industry showcase.
-```markdown
 <div align="center">
 
 <br/>
@@ -9,504 +7,467 @@ Here is the README file enhanced to a highly professional, academic-enterprise s
 ╚══███╔╝╚══██╔══╝     ██╔══██╗╚══██╔══╝██║    ██║██║████╗  ██║
   ███╔╝    ██║        ██║  ██║   ██║   ██║ █╗ ██║██║██╔██╗ ██║
  ███╔╝     ██║        ██║  ██║   ██║   ██║███╗██║██║██║╚██╗██║
-███████╗   ██║        ╚██████╔╝   ██║   ╚███╔███╔╝██║██║ ╚████║
-╚══════╝   ╚═╝         ╚═════╝    ╚═╝    ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝
+███████╗   ██║        ╚██████╔╝  ██║   ╚███╔███╔╝██║██║ ╚████║
+╚══════╝   ╚═╝         ╚═════╝   ╚═╝    ╚══╝╚══╝ ╚═╝╚═╝  ╚═══╝
 ```
 
-### 🛡️ ZT-DTwin | Zero-Trust Network Digital Twin
-#### *Live Attack Simulation · Congestion Control Benchmarking · Real-Time Threat Response*
+<h3>🛡️ Network Digital Twin with Adaptive Zero-Trust Defense</h3>
+<p><em>Live Attack Simulation · TCP Congestion Benchmarking · Anomaly Detection · SIEM Observability</em></p>
 
 <br/>
 
 [![Course](https://img.shields.io/badge/CE313-Computer_Networks-1a1a2e?style=for-the-badge&logo=cisco&logoColor=00d4ff)](.)
 [![Institute](https://img.shields.io/badge/GIK_Institute-Spring_2026-0f3460?style=for-the-badge)](.)
-[![ZTA](https://img.shields.io/badge/NIST_SP_800--207-Zero_Trust-e94560?style=for-the-badge)](.)
+[![ZTA](https://img.shields.io/badge/NIST_SP_800--207-Zero--Trust-e94560?style=for-the-badge)](.)
 [![Simulator](https://img.shields.io/badge/Cisco_Packet_Tracer-8.x-049fd4?style=for-the-badge&logo=cisco&logoColor=white)](.)
-[![Status](https://img.shields.io/badge/Status-Operational-00e5a0?style=for-the-badge)](.)
-[![License](https://img.shields.io/badge/License-Academic_Use_Only-16213e?style=for-the-badge)](.)
+[![Status](https://img.shields.io/badge/Status-In_Progress-f5a623?style=for-the-badge)](.)
+[![License](https://img.shields.io/badge/License-Academic-16213e?style=for-the-badge)](.)
 
 <br/>
 
-> **An academic-industry bridge project**: Quantitative evaluation of TCP performance degradation under live attack traffic  
-> *with adaptive Zero-Trust mitigation, validated through empirical KPIs and packet-level telemetry.*
+> **"The only CE313 project that measures TCP performance degradation under live attack traffic**  
+> **and demonstrates real-time Zero-Trust mitigation with quantitative KPIs."**
 
 <br/>
 
-[📋 Full Proposal](./docs/ZT-DTwin_Proposal.pdf) · [🗺️ Network Topology](#-network-topology) · [⚡ Attack Scenarios](#-live-attack-simulation) · [📊 Benchmarking Suite](#-tcp-congestion-benchmarking) · [🚀 Quick Start](#-getting-started)
+[📋 Proposal PDF](./docs/ZT-DTwin_Proposal.pdf) · [🗺️ Topology](#-network-topology) · [🔴 Attacks](#-live-attack-simulation) · [📊 Benchmarks](#-tcp-congestion-benchmarking) · [🚀 Getting Started](#-getting-started) · [👤 Team](#-team)
 
 </div>
 
 ---
 
-## 📑 Executive Summary
+## 📖 Table of Contents
 
-**ZT-DTwin** is a high-fidelity **Network Digital Twin (NDT)** — an exacting software-based replica of a multi-zone enterprise campus network. The platform enables safe, repeatable execution of live cyberattack scenarios, quantifies their impact on TCP/UDP transport performance, and demonstrates real-time mitigation through **NIST SP 800-207 compliant Zero-Trust Architecture (ZTA)** policies.
+1. [Project Overview](#-project-overview)
+2. [Problem Statement](#-problem-statement)
+3. [Network Topology](#-network-topology)
+4. [IP Addressing Scheme](#-ip-addressing-scheme)
+5. [Five-Layer Coverage](#-five-layer-coverage)
+6. [Zero-Trust Architecture](#-zero-trust-architecture)
+7. [Live Attack Simulation](#-live-attack-simulation)
+8. [TCP Congestion Benchmarking](#-tcp-congestion-benchmarking)
+9. [SIEM-Style Observability](#-siem-style-observability)
+10. [Tools & Technologies](#-tools--technologies)
+11. [Project Milestones](#-project-milestones)
+12. [CLO & Grading Alignment](#-clo--grading-alignment)
+13. [Bonus Opportunities](#-bonus-opportunities)
+14. [Repository Structure](#-repository-structure)
+15. [Getting Started](#-getting-started)
+16. [Team](#-team)
 
-This project transcends conventional academic connectivity labs by establishing a **research-grade simulation framework** that mirrors production workflows across three critical domains:
+---
 
-| Domain | Industry Parallel | Project Implementation |
-|--------|------------------|------------------------|
-| **Enterprise Security** | SOC analyst workflows for threat detection and response | Live SYN flood, DNS poisoning, ARP spoofing, and rogue AP scenarios with forensically captured PCAPs |
-| **Cloud/Edge Networking** | Pre-deployment validation at hyperscalers (Google's Andromeda, Meta's Wedge) | "Day 0” testing of OSPF vs. RIP convergence, ACL policy enforcement, and congestion control behavior under stress |
-| **Zero-Trust Research** | NIST SP 800-207 & U.S. Executive Order 14028 requirements | Full ZTA policy plane: micro-segmentation, 802.1X/WPA3 identity, continuous verification, least-privilege east-west enforcement |
-| **Transport Protocol Research** | IETF working groups on BBRv2 (draft-cardwell-iccrg-bbr2-03) | Four-algorithm TCP comparison (Tahoe, Reno, Cubic, BBR) under three distinct network conditions |
+## 🔭 Project Overview
+
+**ZT-DTwin** is a high-fidelity **Network Digital Twin (NDT)** — a complete, simulated replica of a real enterprise campus network — designed to safely host live cyberattack scenarios, quantitatively measure their impact on TCP/UDP performance, and demonstrate how a **Zero-Trust Architecture (ZTA)** policy layer mitigates each threat in real time.
+
+This is not a connectivity lab. It is a **research-grade simulation platform** that mirrors workflows used by security operations centers, cloud networking teams, and protocol researchers worldwide.
+
+<br/>
+
+<div align="center">
+
+| Domain | Real-World Parallel |
+|:------:|:-------------------:|
+| 🏢 **Enterprise Security** | SOC analysts defending against SYN floods and ARP poisoning at scale |
+| ☁️ **Cloud Networking** | Hyperscalers (Google, Meta, Cisco) using NDTs for pre-deployment validation |
+| 🔒 **Zero-Trust** | NIST SP 800-207 & U.S. Executive Order 14028 mandated architecture |
+| 📡 **TCP Research** | BBR vs. Reno benchmarking mirrors active IETF work (RFC 9002, BBRv2 Draft) |
+
+</div>
+
+<br/>
 
 **Full Title:** *"ZT-DTwin: A Cyber-Resilient Network Digital Twin with Real-Time Threat Response and Performance Analytics"*
 
 ---
 
-## 🎯 Problem Statement & Research Motivation
+## 🚨 Problem Statement
 
-Contemporary enterprise environments face three compounding challenges—each of which ZT-DTwin is architected to resolve:
+Modern enterprise networks face three simultaneous, compounding challenges. ZT-DTwin is engineered to address all three within a single, portfolio-grade simulation.
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│  CHALLENGE 1 │ Security Validation vs. Operational Risk                    │
-│              │ Organizations cannot test live attack responses on          │
-│              │ production networks without risking cascading failures.     │
-│              │ ZT-DTwin ⟶ Isolated, high-fidelity digital twin for         │
-│              │             safe red-team/blue-team exercises.              │
-├─────────────────────────────────────────────────────────────────────────────┤
-│  CHALLENGE 2 │ Congestion Control Under Active Threats                     │
-│              │ Little to no empirical data exists on how TCP congestion    │
-│              │ algorithms (BBR, Cubic, Reno) behave during active attacks. │
-│              │ ZT-DTwin ⟶ Quantified benchmarks: throughput, RTT, jitter,  │
-│              │             loss, and retransmission rates per algorithm.   │
-├─────────────────────────────────────────────────────────────────────────────┤
-│  CHALLENGE 3 │ Zero-Trust Implementation Gap                               │
-│              │ ZTA is NIST-mandated and EO 14028-required, yet most        │
-│              │ engineering graduates have never designed or validated one. │
-│              │ ZT-DTwin ⟶ End-to-end ZTA policy stack with verifiable      │
-│              │             mitigation effectiveness metrics.               │
-└─────────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│  CHALLENGE 1 ─ SAFE ATTACK TESTING                                  │
+│  Security teams cannot run live attack response exercises on        │
+│  production networks without risking service outages. A Digital     │
+│  Twin provides a faithful, isolated replica for safe experimentation │
+│                                                                     │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  CHALLENGE 2 ─ CONGESTION ALGORITHM BENCHMARKING                    │
+│  Engineers lack empirical data on how BBR, Cubic, Reno, and Tahoe  │
+│  behave under active attack traffic — data that is critical for     │
+│  SLA design and capacity planning in adversarial environments       │
+│                                                                     │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  CHALLENGE 3 ─ ZERO-TRUST SKILLS GAP                                │
+│  ZTA is federally mandated (NIST SP 800-207 / EO 14028), yet most   │
+│  graduates have never designed, configured, or validated a          │
+│  Zero-Trust policy stack end-to-end in a multi-zone environment     │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
 ```
-
-By addressing all three dimensions, ZT-DTwin serves as both a **portfolio-grade academic deliverable** and a **conceptual template** for enterprise NDT deployment.
 
 ---
 
-## 🧱 Network Topology Architecture
+## 🗺️ Network Topology
 
-The physical and logical topology implements a **defense-in-depth, multi-zone enterprise architecture**—incorporating Edge, Core, Distribution, Access, Data Center, DMZ, Industrial (OT/IIoT), and Management planes. Each zone is isolated via VLANs with explicit, least-privilege inter-zone ACLs, consistent with ZTA principles.
+The network implements a **multi-zone enterprise architecture** spanning Edge, Core, Distribution, Access, DMZ, OT/IIoT, and Management planes — all interconnected through a hardened policy enforcement layer.
 
 <div align="center">
 
 ![ZT-DTwin Network Topology](./docs/topology.png)
 
-*Figure 1: Logical topology showing Layer 3 routing domains, VLAN segregation, and security zone boundaries.*
-*Edge HA firewalls, Core MLAG pair, Distribution L3 switches, wired/wireless user access, server farm, DMZ, IIoT, and management network.*
+*Full enterprise topology: HA edge firewalls, MLAG core switching, wired/wireless user LANs,  
+server farm, DMZ zone, Industrial/OT network, and a dedicated management & services plane.*
 
 </div>
 
-### Network Zone Matrix
+<br/>
 
-| Zone | VLAN | CIDR | Gateway | Key Devices | Security Posture |
-|------|------|------|---------|-------------|------------------|
-| 🔧 **Management (OOB)** | 10 | `10.10.10.0/24` | `10.10.10.1` | NMS, Syslog, AAA/RADIUS, ZT-Twin Server, vCenter | Out-of-band access; SSHv2-only; TACACS+ |
-| 👤 **User LAN (Wired)** | 20 | `10.10.20.0/24` | `10.10.20.1` | Access switches, User workstations | 802.1X port auth; client isolation |
-| 📱 **User LAN (Wireless)** | 30 | `10.10.30.0/24` | `10.10.30.1` | WLC, Access Points, Laptops | WPA3-Enterprise; RADIUS authentication |
-| 🖥️ **Data Center / Server Farm** | 40 | `10.10.40.0/24` | `10.10.40.1` | AD/DNS, File, Application, Database, Web servers | East-west IPsec; App-ID inspection |
-| 🌐 **DMZ** | 50 | `10.10.50.0/24` | `10.10.50.1` | Public Web Portal, Reverse Proxy | Hardenened OS; WAF rules; rate limiting |
-| 🏭 **Industrial (OT/IIoT)** | 60 | `10.10.60.0/24` | `10.10.60.1` | PLCs, HMIs, SCADA nodes, Sensors, Historian | Unidirectional gateway; Modbus/TCP inspection |
+### Zone Summary
 
-### Physical Infrastructure Stack
+| Zone | VLAN | Subnet | Purpose & Key Devices |
+|:----:|:----:|:------:|:----------------------|
+| 🔵 **Management** | VLAN 10 | `10.10.10.0/24` | NMS, Syslog, AAA/RADIUS, vCenter, SIEM, ZT-Twin Server |
+| 🟢 **User LAN (Wired)** | VLAN 20 | `10.10.20.0/24` | Access switches → Dist-SW-1; DHCP pool for User PCs |
+| 🩵 **User LAN (Wireless)** | VLAN 30 | `10.10.30.0/24` | WLC, Access Points, Laptops; WPA3 enforcement |
+| 🟣 **Server Farm / DC** | VLAN 40 | `10.10.40.0/24` | AD/DNS, File, Application, DB, Web servers |
+| 🔴 **DMZ Zone** | VLAN 50 | `10.10.50.0/24` | Public-facing Web/Portal server, Reverse Proxy |
+| 🟠 **Industrial / OT (IIoT)** | VLAN 60 | `10.10.60.0/24` | PLCs, HMIs, SCADA Nodes, Sensors, Historian |
+
+<br/>
+
+### Physical Layer Architecture
 
 ```
-                              ┌─────────────┐
-                              │   INTERNET   │
-                              │  (Simulated) │
-                              └──────┬──────┘
-                                     │
-                              [ISP Edge Router]
-                                     │
-                    ┌────────────────┴────────────────┐
-                    │                                 │
-              [Firewall-1] ◄═══════HA══════► [Firewall-2]
-                (Active)        VRRP/         (Standby)
-                               CARP Sync
-                    └────────────────┬────────────────┘
-                                     │
-                         ┌───────────┴───────────┐
-                    [Core-SW1]═══MLAG/Stack═══[Core-SW2]
-                      (L3)        (VPC)           (L3)
-                         └───────────┬───────────┘
-                                     │ OSPF Area 0
-        ┌────────────────────────────┼────────────────────────────┐
-        │                            │                            │
-   [Dist-SW-1] ◄────────────────┐   │   ┌────────────────► [Dist-SW-2]
-     (L3)                       │   │   │                         (L3)
-        │                        │   │   │                          │
-   [Access-SW-1..m]              │   │   │                    [WLC]─Access Points
-   (VLAN 20 - Wired)             │   │   │                 (VLAN 30 - WLAN)
-                                  │   │   │
-                        [Server-Farm-SW] [DMZ-SW] [IIoT-Agg-SW] [Mgmt-SW]
-                          (VLAN 40)    (VLAN 50)  (VLAN 60)    (VLAN 10)
+                              ☁️  INTERNET
+                                   │
+                             [ISP Router]
+                                   │
+                ┌──────────────────┴──────────────────┐
+           [Firewall-1] ══════════HA══════════ [Firewall-2]
+             (Active)           Failover          (Standby)
+                └──────────────────┬──────────────────┘
+                                   │
+                ┌──────────────────┴──────────────────┐
+            [Core-SW1] ════════MLAG/Stack════════ [Core-SW2]
+              (L3 Switching)                   (L3 Switching)
+                └──────────────────┬──────────────────┘
+                                   │  OSPF / Dynamic Routing
+          ┌────────────────────────┴──────────────────────────┐
+     [Dist-SW-1 L3]                                    [Dist-SW-2 L3]
+          │                                                    │
+     ┌────┤                                               ┌────┤
+Access-SW-1..m                                     [WLC] ──── Access Points
+(USER VLAN 20)                                     (WLAN VLAN 30)
+          │
+   [Server-Farm-SW] ── [DMZ-SW] ── [IIoT-Agg-SW] ── [Mgmt-SW]
+      VLAN 40            VLAN 50      VLAN 60           VLAN 10
 ```
 
 ---
 
-## 📡 IP Addressing & Service Plane
+## 📡 IP Addressing Scheme
 
-### Management & Services Subnet (VLAN 10) — `10.10.10.0/24`
+### Subnet Allocation Table
 
-| Host | IP Address | Service |
-|------|------------|---------|
-| NMS (Network Management Station) | `10.10.10.10/24` | SNMPv3 polling, syslog viewer, NetFlow collector |
-| Syslog Server | `10.10.10.20/24` | Centralized logging; event correlation |
-| AAA/RADIUS Server | `10.10.10.30/24` | 802.1X authentication; TACACS+ device admin |
-| Backup Server | `10.10.10.40/24` | Configuration and log archival |
-| vCenter / Hypervisor | `10.10.10.50/24` | Virtual infrastructure management (bonus) |
-| **ZT-Twin Controller** | `10.10.10.100/24` | Policy Decision Point (PDP) for ZTA |
+| Segment | Network | Mask | Notable Static Hosts |
+|:--------|:-------:|:----:|:---------------------|
+| Management (VLAN 10) | `10.10.10.0` | `/24` | NMS `.10` · Syslog `.20` · AAA `.30` · Backup `.40` · vCenter `.50` |
+| User LAN Wired (VLAN 20) | `10.10.20.0` | `/24` | DHCP pool — dynamic assignment for all User PCs |
+| User LAN Wireless (VLAN 30) | `10.10.30.0` | `/24` | DHCP pool — dynamic assignment for Laptops |
+| Server Farm (VLAN 40) | `10.10.40.0` | `/24` | AD/DNS `.10` · File `.20` · App `.30` · DB `.40` · Web `.50` |
+| DMZ (VLAN 50) | `10.10.50.0` | `/24` | Web/Portal `.10` · Reverse Proxy `.20` |
+| IIoT / OT (VLAN 60) | `10.10.60.0` | `/24` | Historian `.10` · Asset Inventory `.20` |
 
-### Data Center / Server Farm (VLAN 40) — `10.10.40.0/24`
-
-| Host | IP Address | Service |
-|------|------------|---------|
-| Active Directory / DNS | `10.10.40.10/24` | Domain authentication; internal DNS resolution |
-| File Server | `10.10.40.20/24` | SMB/CIFS shares; departmental storage |
-| Application Server | `10.10.40.30/24` | Line-of-business app backend |
-| Database Server | `10.10.40.40/24` | MySQL/PostgreSQL instance |
-| Web Server (Internal) | `10.10.40.50/24` | Internal corporate portal |
-
-### DMZ (VLAN 50) — `10.10.50.0/24`
-
-| Host | IP Address | Service |
-|------|------------|---------|
-| Public-Facing Web Portal | `10.10.50.10/24` | External customer portal |
-| Reverse Proxy / WAF | `10.10.50.20/24` | TLS termination; request inspection |
-
-### User Address Pools (DHCP)
-
-| VLAN | Scope | DHCP Pool | Lease Time |
-|------|-------|-----------|-------------|
-| VLAN 20 (Wired) | `10.10.20.0/24` | `10.10.20.100 - 10.10.20.200` | 8 hours |
-| VLAN 30 (Wireless) | `10.10.30.0/24` | `10.10.30.100 - 10.10.30.200` | 4 hours |
+> All inter-VLAN routing enforced through the Core switches and firewall ACL policy — no implicit trust between segments.
 
 ---
 
-## 🔬 Full-Protocol-Stack Implementation
+## 🧱 Five-Layer Coverage
 
-Every layer of the TCP/IP model is explicitly implemented and mapped to the CE313 weekly syllabus, ensuring comprehensive coverage of the course’s 15-week arc.
+Every layer of the TCP/IP stack is explicitly implemented, tested, and mapped to CE313 weekly lecture topics.
 
-| Layer | Syllabus Weeks | Implemented Features & Technologies |
-|-------|----------------|--------------------------------------|
-| **Physical** | 2 | Star + spine-leaf hybrid; Category 6a/7 copper, single-mode fiber, 802.11ac wireless; TIA/EIA-568-B structured cabling; impairment modeling (attenuation, crosstalk) |
-| **Data Link** | 3–4 | 802.1Q VLAN trunking; MAC learning/aging; CSMA/CD (Ethernet) vs. CSMA/CA (802.11); Rapid PVST+ loop prevention; **DAI** for ARP security; Port Security with sticky MAC; BPDU Guard/Filter |
-| **Network** | 5, 11–13 | IPv4/IPv6 dual-stack; VLSM subnetting (CIDR); Static + dynamic routing (OSPF Area 0, RIP); NAT/PAT overload; BGP stub AS to simulated ISP; ICMP echo/timestamp; IP SLA for tracking |
-| **Transport** | 8–10 | **Four TCP algorithms**: Tahoe, Reno, Cubic, BBR vs. UDP; iPerf3 benchmarking suite; RTT, jitter, loss; SEQ/ACK analysis; socket simulation; segment retransmission dynamics |
-| **Application** | 6–7, 14 | HTTP/1.1 vs. HTTP/2 (optional HTTP/3); DNS anycast simulation; SMTP relay; SNMPv3 polling; REST API simulation (Flask); NETCONF/YANG conceptual model (Week 14) |
+| Layer | Weeks | Features Implemented |
+|:-----:|:-----:|:---------------------|
+| **Physical** | 2 | Star + Spine-Leaf hybrid topology; copper / fiber / wireless media; TIA/EIA-568 cabling standards; transmission impairment modeling |
+| **Data Link** | 3–4 | VLANs, 802.1Q trunking, MAC learning & aging, CRC detection, CSMA/CD vs CSMA/CA, STP loop prevention, Dynamic ARP Inspection (DAI), port security |
+| **Network** | 5, 11–13 | IPv4/IPv6 dual-stack, VLSM subnetting, NAT/PAT, OSPF + RIP comparison, BGP stub AS, MPLS basics, ICMP diagnostics |
+| **Transport** | 8–10 | TCP Tahoe / Reno / Cubic / BBR vs. UDP; iPerf3 benchmarking; RTT, jitter, and loss measurement under attack and baseline conditions |
+| **Application** | 6–7 | HTTP/1.1 vs HTTP/2 vs HTTP/3 latency testing; DNS anycast; REST API simulation; optional BitTorrent P2P DHT |
 
 ---
 
-## 🛡️ Zero-Trust Architecture (NIST SP 800-207)
+## 🔒 Zero-Trust Architecture
 
-The security plane is architected as a **full Zero-Trust policy decision and enforcement stack**, moving beyond traditional perimeter-based models.
+ZT-DTwin implements a full **Zero-Trust policy stack** per [NIST SP 800-207](https://csrc.nist.gov/publications/detail/sp/800-207/final) and [U.S. Executive Order 14028](https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/).
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         ZERO-TRUST POLICY ENGINE                            │
-│                                                                             │
-│   ┌───────────────┐    ┌─────────────────┐    ┌────────────────────────┐   │
-│   │   IDENTITY    │    │    POLICY       │    │   CONTINUOUS           │   │
-│   │   SOURCE      │───▶│    DECISION     │───▶│   VERIFICATION         │   │
-│   │               │    │    POINT (PDP)  │    │                        │   │
-│   │ 802.1X/WPA3   │    │  ZT-Twin Ctrl   │    │  Per-flow re-auth;     │   │
-│   │ Certificate   │    │  Policy Engine  │    │  Anomaly score change  │   │
-│   └───────────────┘    └─────────────────┘    └────────────────────────┘   │
-│            │                     │                         │               │
-│   ┌────────▼─────────────────────▼─────────────────────────▼────────────┐  │
-│   │                     MICRO-SEGMENTATION ENFORCEMENT                  │  │
-│   │                                                                      │  │
-│   │ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌──────┐│  │
-│   │ │ VLAN 10 │ │ VLAN 20 │ │ VLAN 30 │ │ VLAN 40 │ │ VLAN 50 │ │VLAN60││  │
-│   │ │ MGMT    │ │ USERS   │ │ WLAN    │ │ SERVERS │ │  DMZ    │ │ IIoT ││  │
-│   │ │ [ACL]   │ │ [ACL]   │ │ [ACL]   │ │ [ACL]   │ │ [ACL]   │ │[ACL] ││  │
-│   │ └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘ └──────┘│  │
-│   │       │          │           │           │          │          │    │  │
-│   │       └──────────┴───────────┴───────────┴──────────┴──────────┘    │  │
-│   │                         L3-L7 POLICY ENFORCEMENT                     │  │
-│   └──────────────────────────────────────────────────────────────────────┘  │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│                   ZERO-TRUST POLICY ENGINE                    │
+│                                                               │
+│  ┌──────────────┐    ┌───────────────┐    ┌────────────────┐  │
+│  │   Identity   │    │    Policy     │    │   Continuous   │  │
+│  │    Source    │───▶│   Decision    │───▶│  Verification  │  │
+│  │ (802.1X/WPA3)│    │  Point (PDP)  │    │   (per flow)   │  │
+│  └──────────────┘    └───────────────┘    └────────────────┘  │
+│          │                  │                     │            │
+│  ┌───────▼──────────────────▼─────────────────────▼────────┐  │
+│  │              MICRO-SEGMENTATION ENFORCEMENT             │  │
+│  │                                                         │  │
+│  │  VLAN10   VLAN20   VLAN30   VLAN40   VLAN50   VLAN60    │  │
+│  │  Mgmt     Users    WiFi     Servers   DMZ      OT/IIoT  │  │
+│  │  [ACL]    [ACL]    [ACL]    [ACL]    [ACL]     [ACL]    │  │
+│  └─────────────────────────────────────────────────────────┘  │
+└───────────────────────────────────────────────────────────────┘
 ```
 
-### ZTA Pillar Implementation Matrix
+<br/>
 
-| NIST ZTA Pillar | Implementation in ZT-DTwin | Verification Method |
-|----------------|----------------------------|---------------------|
-| **Identity-Based Micro-segmentation** | Every VLAN = isolated trust zone; cross-zone requires explicit ACL "permit" with no implicit trust. | Show access-list hits; test inter-VLAN ping from unauthorized source → denied. |
-| **Least Privilege Access** | IT staff → Mgmt VLAN; users → VLAN 20/30; servers → VLAN 40; no default gateway access between zones. | Traceroute from User PC to Mgmt IP → fails at distribution ACL. |
-| **Continuous Verification** | 802.1X (MAB) for wired endpoints; WPA3-Enterprise for WLAN; re-auth every 3600s. | `show authentication sessions`; re-authentication timers. |
-| **Encrypted East-West Traffic** | IPsec transport mode between VLAN 40 servers; optional WireGuard for remote access. | Packet captures showing ESP headers between server endpoints. |
-| **Policy Decision Point (PDP)** | Central ZT-Twin Controller (10.10.10.100) evaluates every new flow against policy table before forwarding. | Flow table logs; denied flow counters. |
+### ZTA Pillar Implementation
+
+| ZTA Pillar | Implementation Detail |
+|:-----------|:----------------------|
+| **Identity-Based Micro-Segmentation** | Every VLAN constitutes an independent trust zone; cross-zone traffic requires an explicit ACL `permit` — zero implicit trust |
+| **Continuous Verification** | 802.1X port authentication for all wired endpoints; WPA3-Enterprise for wireless segments |
+| **Least-Privilege Access** | Separate VLANs for IT staff, end users, IoT devices, and the management plane — per-group ACLs enforced at every boundary |
+| **Encrypted East-West Traffic** | IPsec tunnels between Data Center VLANs; WireGuard-style VPN for remote access paths |
+| **Policy Decision Point (PDP)** | Central firewall/router acts as PDP — every new flow is evaluated against the ZT policy table before any forwarding decision |
 
 ---
 
-## ⚡ Live Attack Simulation & Mitigation
+## 🔴 Live Attack Simulation
 
-This module establishes ZT-DTwin’s differentiation from baseline academic projects: **quantitative, reproducible attack scenarios with pre-/during-/post-mitigation telemetry**.
+> This module is the primary technical differentiator of ZT-DTwin from all other CE313 submissions.
 
-### Attack Matrix
+Four complete attack scenarios are scripted, executed, and mitigated within the simulation environment, each producing quantitative before/during/after performance data.
 
-| Attack | OSI Layer | Tool/Method | Zero-Trust Mitigation | Quantitative KPI |
-|--------|-----------|-------------|----------------------|-------------------|
-| **SYN Flood (DoS)** | Transport (L4) | Scapy script; high-rate SYN with spoofed source IPs | ACL rate-limiting (50 pps) + SYN cookies + TCP intercept | Throughput (Mbps) drop % ; Recovery time (sec) ; SYN queue overflow count |
-| **DNS Cache Poisoning** | Application (L7) | Kaminsky-style injection; unsolicited DNS responses | DNSSEC validation + ACL filtering external DNS + UDP source port randomization | Resolution failure rate (%); Cache corruption detection time |
-| **ARP Spoofing / MITM** | Data Link (L2) | Gratuitous ARP; `arp_spoof.py` redirecting gateway traffic | **DAI (Dynamic ARP Inspection)** + static ARP for critical hosts | Intercepted packets before mitigation; DAI block count |
-| **Rogue AP & Lateral Movement** | Physical/L2 | Unauthorized 802.11 AP; attempt to join VLAN 30 | 802.1X + NAC policy + MAB fallback detection | Authentication failures; Switch port disable events |
+<br/>
 
-### Attack-Response Lifecycle (SYN Flood Example)
+### Attack Scenarios
 
-```yaml
-Phase 1 — Baseline (t = -30s to 0s):
-  - Wireshark: Normal TCP handshake (SYN, SYN-ACK, ACK)
-  - iPerf3: Throughput = 94.2 Mbps, RTT_avg = 2.1 ms
-  - ACL counters: 0 hits on rate-limit policy
+| # | Attack | OSI Layer | Tool / Method | ZT Mitigation | Primary Metric |
+|:-:|:------:|:---------:|:-------------:|:-------------:|:--------------:|
+| 1 | **SYN Flood (DoS)** | Transport (L4) | Scapy script | ACL rate-limiting + SYN cookies | Throughput drop % + recovery time |
+| 2 | **DNS Cache Poisoning** | Application (L7) | Manual DNS injection | DNSSEC + DNS filtering ACL | Resolution failure rate |
+| 3 | **ARP Spoofing / MITM** | Data Link (L2) | Dynamic ARP spoofing | DAI + static ARP binding | Intercepted packet count |
+| 4 | **Rogue AP / Lateral Movement** | Physical / Network | Unauthorized host injection | 802.1X + NAC policy enforcement | Blocked flows + auth failure logs |
 
-Phase 2 — Attack (t = 0s to +60s):
-  - Scapy sends 5,000 SYN/sec from spoofed IP 192.0.2.0/24
-  - Wireshark: SYN flood pattern; incomplete handshakes; SYN queue exhaustion
-  - iPerf3: Throughput drops to 12.7 Mbps (86.5% degradation); RTT_avg = 47.3 ms
-  - Syslog: "Potential SYN flood detected from 192.0.2.15"
+<br/>
 
-Phase 3 — ZT Mitigation (t = +60s onward):
-  - ACL rate-limit: Permit TCP any any syn limit 50 pps
-  - SYN cookies enabled on edge firewall
-  - iPerf3: Throughput recovers to 89.1 Mbps (94.5% of baseline) at t+120s
-  - Wireshark: Legitimate handshakes complete; attack SYNs dropped at line rate
+### Three-Phase Measurement Protocol
+
+For every attack scenario, three measurement phases are captured and compared:
+
+```
+  ╔══════════════════╗     ╔══════════════════╗     ╔══════════════════╗
+  ║  PHASE 1         ║     ║  PHASE 2         ║     ║  PHASE 3         ║
+  ║  BEFORE ATTACK   ║────▶║  DURING ATTACK   ║────▶║  AFTER ZT        ║
+  ║                  ║     ║                  ║     ║  MITIGATION      ║
+  ║ • Baseline PCAP  ║     ║ • Attack PCAP    ║     ║ • Recovery PCAP  ║
+  ║ • iPerf3 normal  ║     ║ • iPerf3 degraded║     ║ • iPerf3 restored║
+  ║ • RTT: baseline  ║     ║ • RTT: elevated  ║     ║ • RTT: recovered ║
+  ╚══════════════════╝     ╚══════════════════╝     ╚══════════════════╝
 ```
 
 ---
 
-## 📊 TCP Congestion Control Benchmarking Suite
+## 📊 TCP Congestion Benchmarking
 
-A **research-grade comparison** of four TCP congestion-control algorithms under three distinct network conditions—directly addressing CLO_3 (Analysis & Diagnosis).
+A research-grade comparison of **four TCP congestion control algorithms** across three distinct network conditions — directly addressing CLO_3 analysis requirements and mirroring active IETF standardization work.
 
-### Test Matrix
+<br/>
 
-| Condition | Loss Rate | Delay | TCP Tahoe | TCP Reno | TCP Cubic | TCP BBR (v1) |
-|-----------|-----------|-------|-----------|----------|-----------|--------------|
-| **Normal (Baseline)** | 0.0% | 5 ms | Baseline | Baseline | Baseline | Baseline |
-| **Congested** | 2.0% | 25 ms | Measured | Measured | Measured | Measured |
-| **Under SYN Flood** | Variable | Variable | Measured | Measured | Measured | Measured |
+### Benchmark Matrix
 
-### Metrics Captured per Scenario
+| Condition | TCP Tahoe | TCP Reno | TCP Cubic | TCP BBR |
+|:---------:|:---------:|:--------:|:---------:|:-------:|
+| Baseline — 0% loss | ✅ Measured | ✅ Measured | ✅ Measured | ✅ Measured |
+| Congested — 5% loss | ✅ Measured | ✅ Measured | ✅ Measured | ✅ Measured |
+| Under Active SYN Flood | ✅ Measured | ✅ Measured | ✅ Measured | ✅ Measured |
+
+<br/>
+
+### Performance Metrics Captured
 
 ```
-📈  Throughput (Mbps)            Moving average, 95th percentile
-📉  Round-Trip Time (ms)         min/avg/max + standard deviation
-📶  Jitter (ms)                  Inter-arrival time variance (UDP stream)
-❌  Packet Loss (%)              Observed vs. expected loss
-🔁  Retransmission Rate (%)      dupACKs, RTO events
-🏁  Convergence Time (sec)       Time to recover to 80% of baseline
+  📈  Throughput (Mbps)       — time-series graph per algorithm per condition
+  📉  Round-Trip Time (ms)    — before / during / after each scenario
+  📶  Jitter (ms)             — UDP stream variance under load
+  ❌  Packet Loss (%)          — per algorithm comparison across conditions
+  🔁  Retransmission Rate      — measures congestion response agility
 ```
 
-### Experimental Setup (iPerf3)
-
-```bash
-# Server side (DC server 10.10.40.50)
-iperf3 -s -p 5201-5204 -i 1
-
-# Client side (wired user PC, VLAN 20)
-# TCP Reno (default in many systems)
-iperf3 -c 10.10.40.50 -p 5201 -t 60 -l 64K -P 4 -O 2
-
-# TCP Cubic (Linux default)
-iperf3 -c 10.10.40.50 -p 5202 -t 60 --congestion cubic
-
-# TCP BBR (requires kernel support)
-iperf3 -c 10.10.40.50 -p 5203 -t 60 --congestion bbr
-```
-
-This benchmarking mirrors active IETF research, particularly regarding **BBRv2** (draft-cardwell-iccrg-bbr2-03) and ongoing comparative evaluations of delay-based vs. loss-based algorithms.
+> This benchmark mirrors active IETF research on **BBRv2** ([RFC 9002](https://datatracker.ietf.org/doc/rfc9002/), [BBRv2 Internet Draft](https://datatracker.ietf.org/doc/draft-cardwell-iccrg-bbr-congestion-control/)).
 
 ---
 
-## 📈 SIEM-Style Observability & Telemetry
+## 📡 SIEM-Style Observability
+
+ZT-DTwin implements a full event correlation pipeline — from raw network telemetry to a correlated attack timeline — replicating the workflow of a Security Information and Event Management (SIEM) system.
 
 ```
-┌────────────┐     ┌────────────┐     ┌──────────────────┐     ┌─────────────┐
-│ NETWORK    │     │ SYSLOG     │     │ CORRELATION      │     │ DASHBOARD   │
-│ DEVICES    │────▶│ SERVER     │────▶│ ENGINE           │────▶│ (Grafana)   │
-│ (All nodes)│     │ (VLAN 10)  │     │ (Python/pandas)  │     │ (Bonus)     │
-└────────────┘     └────────────┘     └────────┬─────────┘     └─────────────┘
-                                               │
-                                    ┌──────────▼───────────┐
-                                    │ EVENT TIMELINE       │
-                                    │ T+00s  SYN flood     │
-                                    │ T+02s  Rate-limit    │
-                                    │ T+05s  Throughput    │
-                                    │        recovers      │
-                                    └──────────────────────┘
+  Network Events
+       │
+       ▼
+  [Syslog Server] ──▶ [Correlation Engine] ──▶ [Event Dashboard]
+                               │
+                  ┌────────────▼─────────────┐
+                  │      Event Timeline       │
+                  │                           │
+                  │  T+00s  ARP flood detected│
+                  │  T+03s  DAI blocks attack │
+                  │  T+05s  Throughput recov. │
+                  │  T+12s  ACL log entry     │
+                  │  T+18s  SNMP alert fired  │
+                  └───────────────────────────┘
 ```
 
-| Telemetry Source | Tool/Protocol | Data Exported | Use Case |
-|------------------|---------------|---------------|-----------|
-| **Network devices** | SNMPv3 (AES-256) | ifIn/OutOctets, CPU, TCP stats, ACL counters | Throughput graphing; anomaly baseline |
-| **Packet capture** | Wireshark (PCAP) | Full L2-L7 headers; attack signatures | Forensic analysis; attack pattern validation |
-| **Syslog** | UDP/514 + TLS | Severity 0-7 messages; device logs | Time-correlated event analysis |
-| **Flow telemetry** | NetFlow v9 / IPFIX (Bonus) | 5-tuple, bytes/packets, flags | Traffic matrix; anomaly detection |
-| **API logs** | REST API (simulated) | Request rate, latency, error codes | App-layer performance impact |
+<br/>
+
+### Observability Stack
+
+| Feature | Tool | Output |
+|:--------|:----:|:------:|
+| **SNMP v2c/v3 Polling** | Network devices | Interface stats, error counters, utilization trends |
+| **Packet Telemetry** | Wireshark PCAP | Anomaly signatures, flood pattern fingerprints |
+| **Syslog Correlation** | Syslog Server | Timestamped attack ↔ performance event mapping |
+| **NETCONF / YANG** | Conceptual (Week 14) | YANG model reference documentation |
 
 ---
 
-## 🛠️ Technology Stack & Tools
+## 🛠️ Tools & Technologies
 
-| Category | Tool(s) | Version | Purpose | Config/Code Link |
-|----------|---------|---------|---------|------------------|
-| **Primary Simulation** | Cisco Packet Tracer | 8.2.2 | Full-stack simulation; VLANs, routing, ACLs, servers | [`simulation/ZT_DTwin_Enterprise.pkt`](./simulation/ZT_DTwin_Enterprise.pkt) |
-| **Advanced Routing (Bonus)** | GNS3 + Cisco IOSv | 12.2(33)  | BGP, MPLS, real IOS behavior | [`simulation/gns3/`](./simulation/gns3/) |
-| **Protocol Analysis** | Wireshark | 4.2.x | PCAP capture, filtering, attack forensics | [`pcaps/`](./pcaps/) |
-| **Performance Testing** | iPerf3 | 3.16 | TCP/UDP throughput, RTT, jitter, loss | [`benchmarks/`](./benchmarks/) |
-| **Attack Generation** | Python + Scapy | 3.9+ / 2.5.0 | SYN flood, DNS poison, ARP spoof scripts | [`attacks/`](./attacks/) |
-| **Diagramming** | Draw.io / Lucidchart | N/A | IEEE/TIA-compliant topology diagrams | [`docs/topology.drawio`](./docs/topology.drawio) |
-| **Data Analysis & Graphing** | Python (matplotlib, pandas) / Excel | 3.9+ / Office 365 | Performance comparison charts | [`benchmarks/plot_results.py`](./benchmarks/plot_results.py) |
-| **Observability (Bonus)** | Prometheus + Grafana | 2.x / 10.x | Live performance dashboard | [`observability/`](./observability/) |
-| **SDN (Bonus)** | Mininet + OpenFlow | 2.3.0 / 1.3 | Dynamic flow-rule enforcement | [`sdn/`](./sdn/) |
+| Category | Tool | Role in Project |
+|:---------|:----:|:----------------|
+| **Primary Simulation** | Cisco Packet Tracer 8.x | All layers — VLANs, routing, ACLs, servers, wireless |
+| **Advanced Simulation** | GNS3 + real IOS *(bonus)* | BGP, advanced routing protocols, true IOS behavior |
+| **Protocol Analysis** | Wireshark | Packet capture, attack forensics, telemetry extraction |
+| **Performance Testing** | iPerf3 | TCP/UDP throughput, RTT, jitter benchmarking |
+| **Attack Scripting** | Python + Scapy *(bonus)* | SYN flood generation, DNS injection, ARP spoofing |
+| **Topology Diagrams** | Draw.io / Lucidchart | IEEE/TIA-568-compliant network diagrams |
+| **Data Visualization** | Python (matplotlib) / Excel | Performance comparison charts and KPI graphs |
+| **SDN** | Mininet + OpenFlow *(bonus)* | Dynamic flow-rule policy enforcement |
+| **Observability** | Prometheus + Grafana *(bonus)* | Live real-time performance dashboard |
 
 ---
 
-## 📅 Project Lifecycle & Milestones
+## 🗓️ Project Milestones
 
-```mermaid
-gantt
-    title ZT-DTwin Project Timeline (Spring 2026)
-    dateFormat  YYYY-MM-DD
-    section Definition
-    Proposal & Topology Design    :done, proposal, 2026-02-01, 14d
-    Technology Selection          :done, tech, 2026-02-08, 7d
-    section Implementation
-    Core Network Build (L2/L3)    :active, core, 2026-02-15, 21d
-    Server & Service Configuration :active, servers, 2026-02-22, 21d
-    ZTA Policy Implementation      :zta, 2026-03-01, 21d
-    section Attack & Benchmark
-    Attack Scripting              :attack, 2026-03-08, 21d
-    TCP Benchmarking Suite        :bench, 2026-03-22, 14d
-    section Finalization
-    Report & Documentation        :report, 2026-04-05, 21d
-    Final Demo & Submission       :milestone, 2026-04-25, 1d
+```
+  MILESTONE 1              MILESTONE 2                MILESTONE 3
+  ─────────────            ─────────────              ─────────────
+  Weeks 2–3                Weeks 7–8                  Week 15
+       │                        │                          │
+       ▼                        ▼                          ▼
+  ✅ Proposal             🔄 Mid-Progress             ⏳ Final Submission
+  ─────────               ──────────────              ────────────────────
+  • Title & scope         • Working VLANs             • IEEE report (15–20 pp)
+  • Team information      • OSPF routing live         • Live demo session
+  • Topology draft        • Wireshark captures        • Slide deck (12 slides)
+  • Tools selection       • 5-minute demo             • All PCAP files
+  • CLO mapping           • Attack draft scripts      • Attack scripts
+                                                      • Benchmark graphs
 ```
 
-| Milestone | Week | Deliverable | Status |
-|-----------|------|-------------|--------|
-| **M1: Project Proposal** | 3 | Complete proposal (PDF) with topology, tools, CLO mapping | ✅ Completed |
-| **M2: Mid-Progress Demo** | 8-9 | Working simulation; initial PCAPs; 5-min demo video | 🔄 In Progress |
-| **M3: Final Submission** | 15 | IEEE-format report (15-20 pp); final PKT; PCAPs; scripts; slide deck; demo | ⏳ Planned (Apr 25) |
+---
+
+## 📐 CLO & Grading Alignment
+
+### Course Learning Outcomes
+
+| CLO | Weight | Grade % | Project Coverage |
+|:----|:------:|:-------:|:-----------------|
+| **CLO_1** — Hardware & Software Understanding | 30% of project | 3% total | Full 5-layer documentation; physical topology with media types; complete protocol stack mapping |
+| **CLO_2** — Configuration & Optimization | 30% of project | 3% total | VLAN configuration, OSPF/RIP routing, ACL/firewall rules, VPN tunnels, SSL/TLS — all configured, tested, and optimized |
+| **CLO_3** — Analysis & Diagnosis | 40% of project | 4% total | Attack simulation with quantitative KPIs; 4-algorithm TCP benchmark; ZT mitigation effectiveness analysis; root-cause troubleshooting |
+
+<br/>
+
+### Rubric Alignment
+
+| Criterion | Weight | How Addressed |
+|:----------|:------:|:--------------|
+| Technical Implementation & Correctness | 35% | Full 5-layer simulation across 6 network zones with all mandatory technologies |
+| Analysis & Optimization | 30% | TCP benchmark graphs, attack impact data, OSPF vs. RIP convergence timing comparison |
+| Security & Industry Best Practices | 15% | NIST ZTA, NIST SP 800-207, IPsec VPN, ACLs, 802.1X port authentication, cryptographic primitives |
+| Documentation Quality | 10% | IEEE-format final report, Draw.io topology diagrams, structured README, appendices |
+| Presentation & Demo Quality | 10% | Live troubleshooting demo with full attack scenario walkthrough |
+
+<br/>
+
+### Competitive Differentiation
+
+| Typical CE313 Submission | ✅ ZT-DTwin |
+|:------------------------|:-----------|
+| Static topology — no threats modeled | Live attack simulation with quantitative pre/during/post impact measurement |
+| Security as an afterthought (one firewall rule) | Full NIST-compliant Zero-Trust policy stack across all VLANs and network layers |
+| Single TCP variant — no comparative analysis | 4-algorithm TCP benchmarking under 3 distinct network conditions |
+| No observability or logging infrastructure | SIEM-style event correlation with Wireshark telemetry and Syslog timeline |
+| Pass/fail connectivity checks only | Quantitative KPIs: throughput, RTT, jitter, packet loss — graphed per scenario |
+| One routing protocol — no convergence analysis | OSPF vs. RIP performance comparison with measured convergence timing |
 
 ---
 
-## 📐 CLO & Assessment Alignment
+## 🌟 Bonus Opportunities
 
-### Course Learning Outcomes (CE313)
+> Bonus features target an additional **+5%** on the final project grade.
 
-| CLO | Description | Project Weight | % of Final Grade | How ZT-DTwin Addresses |
-|-----|-------------|---------------|------------------|------------------------|
-| **CLO_1** | **Hardware & Software Understanding** — Explain functions of hardware/software components across network layers | 30% | 3% | Full 5-layer documentation; physical topology with media types; detailed protocol stack diagrams; device roles across 6 zones |
-| **CLO_2** | **Configuration & Optimization** — Design, configure, and optimize network systems for performance and security | 30% | 3% | VLANs, OSPF/RIP, ACL/firewall rules, VPN tunnels, SSL/TLS, STP tuning – all configured and benchmarked |
-| **CLO_3** | **Analysis & Diagnosis** — Analyze packet captures, diagnose faults, evaluate trade-offs | 40% | 4% | Attack simulation with quantitative KPIs; 4-algorithm TCP benchmark; ZT mitigation effectiveness; root-cause troubleshooting tree |
-
-### Grading Rubric Alignment
-
-| Criterion | Weight | How ZT-DTwin Excels |
-|-----------|--------|----------------------|
-| **Technical Implementation & Correctness** | 35% | 5-layer simulation with all mandatory technologies (VLANs, ACLs, NAT, dynamic routing, DHCP, DNS, HTTP) across 6 network zones—verified via connectivity tests and PCAPs. |
-| **Analysis, Optimization & Benchmarking** | 30% | TCP benchmark graphs (4 algorithms × 3 conditions); attack impact measurement (before/during/after); OSPF vs. RIP convergence timing; optimization recommendations. |
-| **Security & Industry Best Practices** | 15% | NIST SP 800-207 ZTA, EO 14028 compliance; IPsec VPN; DAI; 802.1X; SNMPv3; least-privilege ACL design; security posture table. |
-| **Documentation Quality** | 10% | IEEE-format report; Draw.io topology diagrams; comprehensive README; structured appendices with PCAP annotations. |
-| **Presentation & Demo Quality** | 10% | Live topology tour, attack scenario walkthrough, iPerf3 benchmarking demo, troubleshooting simulation. |
-
-### Comparative Advantage: ZT-DTwin vs. Typical CE313 Project
-
-| Aspect | Typical Course Project | ZT-DTwin |
-|--------|------------------------|----------|
-| Threat modeling | None or static | Live attack simulation with quantitative impact measurement (before/during/after) |
-| Security design | One firewall ACL (afterthought) | Full Zero-Trust policy stack across all VLANs and layers (NIST SP 800-207) |
-| TCP analysis | Ping RTT only | 4-algorithm (Tahoe/Reno/Cubic/BBR) benchmark under 3 distinct conditions; IETF context |
-| Observability | None | SIEM-style event correlation with Wireshark telemetry and syslog timeline |
-| Validation | Ping success only | Quantitative KPIs: throughput, RTT, jitter, loss, retransmission rates (graphs) |
-| Routing | Static or single protocol | OSPF vs. RIP comparison with convergence timing and load distribution analysis |
+| # | Bonus Feature | CE313 Alignment | Status |
+|:-:|:-------------|:---------------:|:------:|
+| 1 | HTTP/3 QUIC latency vs HTTP/1.1 under simulated packet loss | Week 6 + IETF research | ⏳ Planned |
+| 2 | Mininet + OpenFlow SDN with dynamic attack-response flow rules | Week 13 (SDN/OpenFlow) | ⏳ Planned |
+| 3 | Prometheus + Grafana live observability dashboard | Network Management | ⏳ Planned |
+| 4 | BBRv2 analysis referencing IETF Internet Draft | Active TCP Research | ⏳ Planned |
+| 5 | BitTorrent-style P2P DHT overlay simulation | Week 7 (Application Layer) | ⏳ Planned |
 
 ---
 
-## 🌟 Bonus Opportunities (Up to +5%)
-
-| Feature | CE313 Alignment | Implementation Status | Expected Deliverable |
-|---------|----------------|----------------------|----------------------|
-| **HTTP/3 (QUIC) vs. HTTP/1.1 latency under packet loss** | Week 6 (Application) + IETF QUIC WG | 📅 Planned | Comparative latency graph; analysis of 0-RTT benefits |
-| **Mininet + OpenFlow SDN with dynamic attack-response flow rules** | Week 13 (SDN/OpenFlow + P4) | 📅 Planned | Flow rule push on SYN detection; Grafana dashboard |
-| **Prometheus + Grafana observability dashboard** | Network Management (Week 11) | 📅 Planned | Real-time graphs of throughput, drops, RTT, attack events |
-| **BBRv2 analysis referencing IETF Internet Draft** | Weeks 8-10 (Transport) | 📅 Planned | Side-by-side BBRv1 vs BBRv2 behavioral analysis |
-| **BitTorrent-style P2P DHT simulation (Kademlia)** | Week 7 (P2P networks) | 📅 Planned | DHT join/lookup latency; overlay network simulation |
-
----
-
-## 📂 Repository Structure
+## 📁 Repository Structure
 
 ```
 ZT-DTwin/
 │
-├── README.md                          # Comprehensive project documentation (this file)
-├── LICENSE                            # Academic Use Only license
+├── 📄 README.md                          ← Project documentation (this file)
 │
 ├── 📂 docs/
-│   ├── ZT-DTwin_Proposal.pdf          # Complete project proposal (PDF, 8 pp)
-│   ├── topology.png                   # High-resolution network topology diagram
-│   ├── topology.drawio                # Editable Draw.io source file
-│   └── CLO_Mapping_Matrix.pdf         # CLO-to-implementation traceability
+│   ├── ZT-DTwin_Proposal.pdf             ← Full project proposal
+│   └── topology.png                      ← Network topology diagram
 │
 ├── 📂 simulation/
-│   ├── ZT_DTwin_Enterprise.pkt        # Main Packet Tracer 8.x file
-│   ├── ZT_DTwin_GNS3.gns3project      # GNS3 project (bonus)
-│   └── 📂 configs/                     # Per-device CLI configurations
-│       ├── CORE-R1.txt
-│       ├── CORE-R2.txt
-│       ├── DIST-SW1.txt
-│       ├── DIST-SW2.txt
-│       ├── ACC-SW-IT.txt
-│       ├── ACC-SW-HR.txt
-│       ├── ACC-SW-FIN.txt
-│       ├── ACC-SW-SALES.txt
-│       ├── ACC-SW-SRV.txt
-│       ├── WLC_Config.txt
-│       ├── FIREWALL-1.txt
-│       └── FIREWALL-2.txt
+│   ├── ZT_DTwin_Enterprise.pkt           ← Cisco Packet Tracer simulation file
+│   └── configs/                          ← Per-device CLI configurations
+│       ├── CORE-R1.txt                   ← Core Router 1 (OSPF, NAT, BGP)
+│       ├── CORE-R2.txt                   ← Core Router 2 (redundancy)
+│       ├── DIST-SW1.txt                  ← Distribution Switch 1 (L3, VLAN routing)
+│       ├── DIST-SW2.txt                  ← Distribution Switch 2
+│       ├── ACC-SW-IT.txt                 ← Access Switch — IT VLAN
+│       ├── ACC-SW-HR.txt                 ← Access Switch — HR VLAN
+│       ├── ACC-SW-FIN.txt                ← Access Switch — Finance VLAN
+│       ├── ACC-SW-SALES.txt              ← Access Switch — Sales VLAN
+│       └── ACC-SW-SRV.txt                ← Server Farm Access Switch
 │
 ├── 📂 attacks/
-│   ├── syn_flood.py                   # Scapy SYN flood (rate + duration configurable)
-│   ├── dns_poison.py                  # Kaminsky-style DNS cache injection
-│   ├── arp_spoof.py                   # MITM ARP spoofing with restoration
-│   └── rogue_ap_sim.sh                # Simulate unauthorized AP (bonus)
+│   ├── syn_flood.py                      ← Scapy SYN flood DoS script
+│   ├── dns_poison.py                     ← DNS cache poisoning script
+│   └── arp_spoof.py                      ← ARP spoofing / MITM script
 │
 ├── 📂 pcaps/
-│   ├── baseline_traffic.pcap          # 60-sec normal traffic (VLAN 20 ↔ VLAN 40)
-│   ├── syn_flood_attack.pcap          # SYN flood live capture
-│   ├── syn_flood_mitigated.pcap       # Post-ZT rate-limit + SYN cookies
-│   ├── dns_poison_attack.pcap         # Unsolicited DNS response injection
-│   ├── arp_spoof_dai_blocked.pcap     # DAI detection and block evidence
-│   └── README_pcaps.md                # Capture annotations and filter guides
+│   ├── baseline_traffic.pcap             ← Normal traffic baseline capture
+│   ├── syn_flood_attack.pcap             ← SYN flood attack capture
+│   ├── syn_flood_mitigated.pcap          ← Post-ACL mitigation capture
+│   └── arp_spoof_dai_blocked.pcap        ← DAI enforcement evidence
 │
 ├── 📂 benchmarks/
-│   ├── tcp_comparison_results.csv     # Raw iPerf3 data (all algorithms + conditions)
-│   ├── tcp_comparison_results.xlsx    # Formatted Excel with multiple sheets
-│   ├── plot_results.py                # Python/matplotlib graph generator
-│   ├── generated_graphs/              # Output graphs (throughput, RTT, loss, etc.)
-│   └── iPerf3_scripts/
-│       ├── run_all_benchmarks.sh      # Automate iPerf3 test matrix
-│       └── parse_results.py           # Parse iPerf3 JSON output
-│
-├── 📂 observability/ (bonus)
-│   ├── prometheus.yml                 # Prometheus scrape config
-│   ├── grafana_dashboard.json         # Pre-built dashboard for KPIs
-│   └── snmp_exporter_config.yml       # SNMP exporter for device metrics
-│
-├── 📂 sdn/ (bonus)
-│   ├── mininet_topology.py            # Mininet script mirroring ZT-DTwin
-│   └── controller_app.py              # Ryu/POX app for dynamic flow rules
+│   ├── tcp_comparison_results.xlsx       ← iPerf3 raw data (all algorithms)
+│   └── plot_results.py                   ← matplotlib performance graph generator
 │
 └── 📂 report/
-    ├── ZT-DTwin_Final_Report.pdf      # IEEE-format final report (15-20 pp)
-    ├── ZT-DTwin_Presentation.pptx     # 12-slide deck for final demo
-    └── ZT-DTwin_Demo.mp4              # 10-15 minute walkthrough video
+    └── ZT-DTwin_Final_Report.pdf         ← IEEE-format final report
 ```
 
 ---
@@ -515,167 +476,135 @@ ZT-DTwin/
 
 ### Prerequisites
 
-| Requirement | Version | Notes |
-|-------------|---------|-------|
-| **Cisco Packet Tracer** | 8.x | Free with Cisco NetAcad account; required for primary simulation |
-| **Python** | 3.8+ | For attack scripts, benchmarking analysis, and graphing |
-| **Wireshark** | 4.x+ | For PCAP analysis and forensics |
-| **iPerf3** | 3.7+ | For TCP/UDP benchmarking (install via `apt-get`, `brew`, or direct download) |
-| **Git** | Any | For repository cloning |
+Before opening or building the simulation, ensure the following tools are installed:
 
-### Installation & Opening the Simulation
+| Tool | Version | Purpose | Download |
+|:-----|:-------:|:-------:|:--------:|
+| Cisco Packet Tracer | 8.x | Primary simulation environment | [NetAcad](https://www.netacad.com/courses/packet-tracer) |
+| Python | 3.8+ | Attack scripts and benchmark graphing | [python.org](https://python.org) |
+| Wireshark | Latest | PCAP analysis and traffic forensics | [wireshark.org](https://wireshark.org) |
+
+<br/>
+
+### 1. Clone the Repository
 
 ```bash
-# Clone the repository
 git clone https://github.com/shehroz/ZT-DTwin.git
 cd ZT-DTwin
+```
 
-# Open the main Packet Tracer file
-# Method 1: Double-click simulation/ZT_DTwin_Enterprise.pkt (if .pkt extension associated with PT)
-# Method 2: Open Packet Tracer → File → Open → navigate to file
+### 2. Open the Simulation
 
-# Verify core connectivity in PT CLI
-# On CORE-R1:
+```bash
+# Option A — Double-click the .pkt file in your file explorer
+# Option B — Open via terminal (macOS/Linux)
+open simulation/ZT_DTwin_Enterprise.pkt
+```
+
+### 3. Manual Build (if PKT version mismatch)
+
+If the pre-built `.pkt` file does not open due to a version mismatch, follow this configuration order:
+
+```bash
+# Step 1: Open Cisco Packet Tracer and build the physical topology
+
+# Step 2: Paste each config into the corresponding device CLI
+#         (Simulation > CLI > paste config text)
+
+# Configuration order:
+#   1. CORE-R1, CORE-R2         (routers — routing protocols first)
+#   2. DIST-SW1, DIST-SW2       (L3 distribution switches)
+#   3. ACC-SW-IT through SRV    (access layer switches)
+#   4. Servers                  (configure via GUI per SERVER_SETUP.txt)
+#   5. End devices              (set all PCs/Laptops to DHCP)
+```
+
+### 4. Run Attack Scripts *(GNS3 or physical lab environment only)*
+
+> ⚠️ **Warning:** These scripts generate real attack traffic. Run only in isolated lab environments. Never use on production or shared networks.
+
+```bash
+# Install dependencies
+pip install scapy
+
+# SYN Flood against web server
+python attacks/syn_flood.py --target 10.10.40.50 --rate 1000
+
+# ARP Spoofing between gateway and target host
+python attacks/arp_spoof.py --gateway 10.10.20.1 --target 10.10.20.50
+
+# DNS Cache Poisoning
+python attacks/dns_poison.py --target 10.10.10.20
+```
+
+### 5. Generate Performance Benchmark Graphs
+
+```bash
+# Install graphing dependencies
+pip install matplotlib pandas openpyxl
+
+# Generate all TCP comparison plots
+python benchmarks/plot_results.py
+# Output: benchmarks/plots/tcp_comparison_all.png
+```
+
+### 6. Verify Connectivity (inside Packet Tracer CLI)
+
+```
+! ── On CORE-R1 ──────────────────────────────────────────
 show ip ospf neighbor
 show ip route
 show ip nat translations
 show access-lists
 
-# On DIST-SW1:
+! ── On DIST-SW1 ──────────────────────────────────────────
 show vlan brief
 show interfaces trunk
-show standby brief    # For FHRP if configured
+show standby brief
+show spanning-tree summary
 
-# Test from a User PC (VLAN 20):
-ping 10.10.40.50      # DC web server → should succeed
-ping 10.10.10.10      # Mgmt NMS → should fail (ZT ACL)
-ping 8.8.8.8          # Internet via NAT → should succeed
-```
-
-### Manual Topology Build (if version mismatch)
-
-If your Packet Tracer version cannot open the provided `.pkt` file, follow this manual build order:
-
-1. **Core Routers (CORE-R1, CORE-R2)**
-   - Configure interfaces, OSPF, static default route, NAT
-   - Paste configs from `simulation/configs/CORE-R1.txt`
-
-2. **Distribution Switches (DIST-SW1, DIST-SW2)**
-   - Configure SVIs (VLAN 10, 20, 30, 40, 50, 60)
-   - Configure trunk ports to Core and Access switches
-   - Paste configs from `simulation/configs/DIST-SW1.txt`
-
-3. **Access Switches (ACC-SW-IT, ACC-SW-HR, ACC-SW-FIN, ACC-SW-SALES, ACC-SW-SRV)**
-   - Configure VLANs, access ports, 802.1X parameters
-   - Paste from respective config files
-
-4. **Servers & Services**
-   - Assign static IPs per [IP Addressing Scheme](#-ip-addressing--service-plane)
-   - Enable services: DHCP on User VLANs, DNS on AD server, HTTP on Web servers
-
-5. **End Devices (PCs, Laptops)**
-   - Set to DHCP (VLAN 20/30)
-   - Verify DNS resolution: `nslookup internal.zt-twin.local`
-
-### Running Attack Scripts (Scapy — requires real Linux environment)
-
-```bash
-# Install Scapy
-pip install scapy
-
-# Run SYN flood against DC web server (rate = 500 packets/sec)
-sudo python attacks/syn_flood.py --target 10.10.40.50 --rate 500 --duration 30
-
-# Run ARP spoofing (MITM between gateway and target)
-sudo python attacks/arp_spoof.py --gateway 10.10.20.1 --target 10.10.20.50 --interface eth0
-
-# Note: In Packet Tracer simulation, use the built-in "Attack" tool or manual packet generation.
-# For full script functionality, use GNS3/VM environment.
-```
-
-### Generating Performance Graphs
-
-```bash
-# Install Python dependencies
-pip install matplotlib pandas numpy openpyxl
-
-# Run the plotting script (generates graphs from benchmark CSV)
-cd benchmarks
-python plot_results.py
-
-# Output graphs will be saved to benchmarks/generated_graphs/
-# Files: throughput_comparison.png, rtt_comparison.png, loss_retransmit.png
+! ── From IT-PC1 (User VLAN 20) ───────────────────────────
+ping 8.8.8.8               ! Internet reachability (NAT)
+ping 10.10.40.50           ! Cross-zone: Web server
+ping 10.10.20.50           ! Same VLAN: peer host
+traceroute 10.10.40.30     ! Hop-by-hop path to App server
 ```
 
 ---
 
-## 🤝 Team & Attribution
+## 👤 Team
 
 <div align="center">
 
-| | Details |
-|---|---|
-| **Project Lead & Designer** | Shehroz Majeed |
+<br/>
+
+| Field | Details |
+|:-----:|:-------:|
+| **Name** | Shehroz Majeed |
+| **Student ID** | *(see institutional records)* |
 | **Course** | CE313 — Computer Communications & Networks |
-| **Institution** | GIK Institute of Engineering Sciences & Technology, Topi, Pakistan |
+| **Institution** | GIK Institute of Engineering Sciences & Technology |
 | **Instructor** | Engr. Muhammad Ahmad Nawaz |
 | **Semester** | Spring 2026 |
-| **Project Theme** | Hybrid: Zero-Trust Architecture + Network Digital Twin + Attack Simulation + Congestion Control Research |
-
-</div>
-
----
-
-## 📚 References & Standards
-
-| Standard/Document | Relevance | Implementation Section |
-|------------------|-----------|------------------------|
-| **NIST SP 800-207** | Zero Trust Architecture | [Zero-Trust Architecture](#-zero-trust-architecture-nist-sp-800-207) |
-| **U.S. Executive Order 14028** | Federal ZTA mandate | [Zero-Trust Architecture](#-zero-trust-architecture-nist-sp-800-207) |
-| **RFC 793** | TCP Specification | [TCP Congestion Benchmarking](#-tcp-congestion-benchmarking-suite) |
-| **RFC 5681** | TCP Congestion Control | [TCP Congestion Benchmarking](#-tcp-congestion-benchmarking-suite) |
-| **RFC 9002** | QUIC Loss Detection | [Bonus Opportunities](#-bonus-opportunities-up-to-5) (HTTP/3) |
-| **IETF Draft: BBRv2** | Cardwell et al., 2021 | [Bonus Opportunities](#-bonus-opportunities-up-to-5) (BBRv2 analysis) |
-| **IEEE 802.1X** | Port-Based Network Access Control | [Zero-Trust Architecture](#-zero-trust-architecture-nist-sp-800-207) |
-| **TIA/EIA-568-B** | Structured Cabling Standard | [Five-Layer Coverage](#-full-protocol-stack-implementation) |
-
----
-
-## 📄 License
-
-This project is licensed under the **Academic Use Only** license — provided for educational purposes, evaluation, and research use within academic institutions. Redistribution or commercial use is not permitted without explicit written consent. See the [LICENSE](./LICENSE) file for details.
-
----
-
-<div align="center">
-
-### 📋 Full Proposal
-
-For complete project context, methodology, CLO mapping, and preliminary results:
-
-**[📥 Download ZT-DTwin_Proposal.pdf](./docs/ZT-DTwin_Proposal.pdf)**
-
----
-
-### ✉️ Contact & Feedback
-
-For questions, collaboration, or academic evaluation:
-
-- **Email:** [shehroz.majeed@giki.edu.pk](mailto:shehroz.majeed@giki.edu.pk)
-- **GitHub Issues:** [Project Issue Tracker](https://github.com/shehroz/ZT-DTwin/issues)
-- **Course Reference:** CE313 — Spring 2026, Section A
+| **Project Theme** | Zero-Trust · Network Digital Twin · Attack Simulation · TCP Benchmarking |
 
 <br/>
 
 ---
 
-*CE313 — GIK Institute · Spring 2026 · Instructor: Engr. Muhammad Ahmad Nawaz*
+### 📄 Full Proposal Document
 
-*Built with 🛡️ by Shehroz Majeed*
+The complete project proposal — including scope, methodology, and CLO justification — is available as a PDF:
 
-*Last updated: April 2026*
+**[📥 Download ZT-DTwin\_Proposal.pdf](./docs/ZT-DTwin_Proposal.pdf)**
+
+---
+
+<sub>CE313 — GIK Institute of Engineering Sciences & Technology · Spring 2026</sub>  
+<sub>Instructor: Engr. Muhammad Ahmad Nawaz</sub>
+
+<br/>
+
+*Built with 🛡️ by Shehroz · Pursuing rigorous, portfolio-grade network engineering*
 
 </div>
-```
-
-This enhanced README has been elevated to a professional, academic-enterprise standard. Key improvements include: a formal executive summary; explicit problem statement; comprehensive zone and IP matrix; detailed architecture stacks; quantitative KPI tables; full tool/technology inventory with versioning; Gantt chart for milestones; CLO mapping; and complete repository structure with validation commands.
